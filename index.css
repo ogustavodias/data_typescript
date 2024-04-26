@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  padding: 10px 40px;
+}
+
+table {
+  width: 100%;
+  font-size: 20px;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+h1 {
+  font-weight: bold;
+  text-align: left;
+  font-size: 2rem;
+  padding: 10px 0;
+}
+
+#statistics {
+  border-top: 8px solid #f5f5f5;
+}
+
+#statistics > div {
+  border-bottom: 4px solid #f5f5f5;
+}
+
+#statistics > div p {
+  padding: 15px 0;
+  font-weight: bold;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+
+table tbody td,
+table thead th,
+table caption,
+#statics {
+  padding: 8px;
+}
