@@ -35,6 +35,9 @@ class Week {
     getDays() {
         return this.days;
     }
+    setDay(index) {
+        this.days[index].count++;
+    }
 }
 export default Week;
 //# sourceMappingURL=Week.js.map

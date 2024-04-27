@@ -37,6 +37,10 @@ class Week {
   getDays() {
     return this.days;
   }
+
+  setDay(index: number) {
+    this.days[index].count++;
+  }
 }
 
 export default Week;
