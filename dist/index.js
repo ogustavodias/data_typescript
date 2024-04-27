@@ -1,18 +1,17 @@
 import fetchData from "./fetch.js";
 import normalizeOrder from "./normalize.js";
-import getStatistics, { populateStatistics } from "./statistics.js";
+import { populateStatistics } from "./statistics.js";
 import { populateTable } from "./table.js";
-import { Estatisticas } from "./models/Statistics.js";
+import { Statistics } from "./models/Statistics.js";
 async function getData() {
     const url = "https://api.origamid.dev/json/transacoes.json";
     const orders = await fetchData(url);
     if (!orders)
         return;
     const normalizedOrders = orders.map(normalizeOrder);
-    const statistics = getStatistics(normalizedOrders);
+    const statistics = new Statistics(normalizedOrders);
     populateTable(normalizedOrders);
     populateStatistics(statistics);
-    console.log(new Estatisticas(normalizedOrders));
 }
 getData();
 //# sourceMappingURL=index.js.map
