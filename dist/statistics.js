@@ -61,8 +61,6 @@ export default function getStatistics(orders) {
         calcStatus(order.status);
         const indexOfDay = order.date.getDay();
         week.getDays()[indexOfDay].count++;
-        console.log(order.date);
-        console.log(week);
     });
     calcBestDay(week);
     return statistics;
