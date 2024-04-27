@@ -14,11 +14,11 @@ export function populateStatistics(statistics: Statistics): void {
       <p>Total: <span>${toCurrency(statistics.total)}</span></p>
     </div>
     <div>
-    ${Object.keys(statistics.countByType)
-      .map((item) => {
-        return `<p>${item}: <span>${statistics.countByType[item]}</span></p>`;
-      })
-      .reduce((acc, active) => acc + active, "")}
+      ${Object.keys(statistics.countByType)
+        .map((item) => {
+          return `<p>${item}: <span>${statistics.countByType[item]}</span></p>`;
+        })
+        .reduce((acc, active) => acc + active, "")}
     </div>
     <div>
       ${Object.keys(statistics.countByStatus)
